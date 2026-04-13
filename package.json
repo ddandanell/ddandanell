@@ -1,0 +1,22 @@
+{
+  "name": "rumraket",
+  "version": "0.1.0",
+  "description": "🚀 Rumraket — AI-powered application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "jest",
+    "db:migrate": "bash scripts/migrate.sh",
+    "db:seed": "echo 'TODO: implement seed script'",
+    "setup": "bash scripts/setup.sh"
+  },
+  "keywords": ["ai", "llm", "chatbot"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

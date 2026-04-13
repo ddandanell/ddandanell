@@ -1,0 +1,24 @@
+{
+  "name": "research-chain",
+  "description": "En kæde der researcher et emne, opsummerer og genererer anbefalinger",
+  "steps": [
+    {
+      "id": "research",
+      "prompt": "system/default-assistant.md",
+      "input": "{{user_query}}",
+      "output_key": "research_result"
+    },
+    {
+      "id": "summarize",
+      "prompt": "templates/summarize.md",
+      "input": "{{research_result}}",
+      "output_key": "summary"
+    },
+    {
+      "id": "recommend",
+      "prompt": "system/default-assistant.md",
+      "input": "Baseret på denne opsummering, giv 3 konkrete anbefalinger:\n\n{{summary}}",
+      "output_key": "recommendations"
+    }
+  ]
+}
